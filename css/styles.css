@@ -460,6 +460,14 @@ border-radius: 4px;
   margin-left: 0px;
 }
 
+.client-card:hover,
+.client-card:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
 .client-link {
   display: inline-flex;
   align-items: center;
@@ -472,6 +480,8 @@ border-radius: 4px;
   height: 60px;
   fill: var(--primary-icon-color);
 }
+
+
 
 
 
