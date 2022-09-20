@@ -18,7 +18,7 @@
   rgba(0, 0, 0, 0.1), 0px 1px 2px 
   rgba(0, 0, 0, 0.08), 0px 2px 2px
    rgba(0, 0, 0, 0.12);
-   
+  --primary-icon-color: #afb1b8;
 }
 
 
@@ -164,15 +164,15 @@ body {
   margin-left: 50px;
 }
 
-.contact-svg {
-  display: flex;
 
-}
 
 .mail,
 .phone {
   margin-right: 10px;
+  fill: currentColor;
 }
+
+
 
 
 /*main*/
@@ -327,30 +327,12 @@ border-radius: 4px;
 
 }
 
-
-
 .icon-antenn,
 .icon-clock,
-icon-diagram,
-icon-astr {
+.icon-diagram,
+.icon-astr {
   height: 70px;
   width: 70px;
-}
-
-.icon-antenna::before {
-  background-image: url("../images/icons.svg/clock\ 1.svg");
-}
-
-.icon-clock::before {
-  background-image: url("../images/icons.svg/clock\ 1.svg");
-}
-
-.icon-diagram::before {
-  background-image: url("../images/icons.svg/diagram\ 1.svg");
-}
-
-.icon-astr::before {
-  background-image: url("../images/icons.svg/astronaut\ 1.svg");
 }
 
 
@@ -411,54 +393,46 @@ icon-astr {
   margin-top: 0;
   margin-bottom: 16px;
 }
+/*team social svg  */
 
-.social-net {
+.team-list {
+  color: var(--primary-text-color);
+}
+
+.social-list {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  list-style: none;
   align-items: center;
   justify-content: center;
 }
 
-.net{
-  display: block;
-  height: 44px;
-  width: 44px;
-  padding: 0;
-  margin-left: 10px;
+.social-item {
+  margin-right: 10px;
+
+}
+
+.social-item:last-child {
   margin-right: 0;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  
+  fill: var(--primary-icon-color);
 }
 
-.insta {
-  background-image: url("../images/icons.svg/3-instagram.svg");
-  background-color: #2196F3;
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
 }
 
-.inst {
-  background-image: url("../images/icons.svg/3-instagram2.svg");;
-}
-
-.twit {
-  background-image: url("../images/icons.svg/3-twitter.svg"); 
-}
-
-.fb {
-  background-image: url("../images/icons.svg/3-facebook.svg");
-}
-
-.ln {
-  background-image: url("../images/icons.svg/3-linkedin.svg");
-}
-
-.net:nth-child(1) {
-  margin-left: 0px;
+.social-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /*Постійні кліенти*/
@@ -466,8 +440,7 @@ icon-astr {
 .client-list {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
- 
+  flex-wrap: wrap;  
   height: 92px;
 }
 
@@ -494,39 +467,11 @@ icon-astr {
   text-decoration: none;
 }
 
-.client-link::before {
-  content: "";
+.client-icon {
   width: 106px;
   height: 60px;
-  background-size: contain;
+  fill: var(--primary-icon-color);
 }
-
-.first::before {
-   background-image: url("../images/icons.svg/4-logo-1.svg");
-}
-
-.second::before {
-  background-image: url("../images/icons.svg/4-logo-2.svg");
-}
-
-.third::before {
-  background-image: url("../images/icons.svg/4-logo-3.svg");
-}
-
-.fourth::before {
-  background-image: url("../images/icons.svg/4-logo-4.svg");
-}
-
-.fifth::before {
-  background-image: url("../images/icons.svg/4-logo-5.svg");
-}
-
-.sixth::before {
-  background-image: url("../images/icons.svg/4-Logo-6.svg");
-}
-
-
-
 
 
 
@@ -614,6 +559,17 @@ icon-astr {
   color: var(---secondary-text-color);
 }
 
+.item-card .link {
+  display: block;
+}
+
+.item-card .link:hover,
+.item-card .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
 /* Footer */
 .footer {
   background-color: var(--dark-background-color);
@@ -634,6 +590,8 @@ icon-astr {
 .logo-footer {
   color: var(--white-text-color);
 }
+
+/*adress*/
 
 .address {
   font-style: normal;
@@ -659,12 +617,16 @@ icon-astr {
   color: var(--accent-color);
 }
 
+/*social-net-footer*/
+
 .social-net-footer {
   width: 206px;
   height: 80px;
+  margin-right: 0;
+  
 }
 
-.social-net-list {
+.social-list {
   display: flex;
   margin-left: 0;
   margin-right: 0;
@@ -685,4 +647,17 @@ icon-astr {
   color: var(--white-text-color);
 }
 
+.main-footer {
+  display: flex;
+  align-items: baseline;
+}
+.adress {
+  margin-right: 70px;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--white-text-color);
+}
 
