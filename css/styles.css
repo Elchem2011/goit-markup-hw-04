@@ -6,7 +6,10 @@
   --white-opacity-text-color: rgba(255, 255, 255, 0.6);
   --primary-background-color: #fff;
   --secondary-background-color: #f5f4fa;
+  --thirdbackground: #C4C4C4;
   --dark-background-color: #2f303a;
+  --primary-icon-color: #afb1b8;
+  --primary-white-color: #fff;
   --logo-color: #000;
   --border-color: #ececec;
   --border-card-color: #eee;
@@ -18,7 +21,7 @@
   rgba(0, 0, 0, 0.1), 0px 1px 2px 
   rgba(0, 0, 0, 0.08), 0px 2px 2px
    rgba(0, 0, 0, 0.12);
-  --primary-icon-color: #afb1b8;
+   
 }
 
 
@@ -152,7 +155,8 @@ body {
   color: var(--secondary-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
-  display: inline-flex;
+  display: flex;
+  align-items: center;
 }
 
 .contact .link:hover,
@@ -182,15 +186,17 @@ body {
   text-align: center;
   background-color: var(--dark-background-color);
   padding-top: 200px;
-  padding-bottom: 200px;    
-      
+  padding-bottom: 200px;        
   max-width: 1600px;
-  height: 600px;
+  min-height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),
    rgba(47, 48, 58, 0.4)), 
    url(../images/overlay.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 .hero-title {
   font-weight: 900;
@@ -249,8 +255,18 @@ border-radius: 4px;
   padding-bottom: 94px;
 }
 
-.title-hidden {
-  display: none;
+.visually-hidden { 
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section-title {
@@ -260,7 +276,6 @@ border-radius: 4px;
   line-height: 1.167;
   letter-spacing: 0.03em;
   margin-top: 0;
-  margin-left: calc(-1 * var(--card-set-gap));
   text-align: center;
   margin-bottom: 50px;
 }
@@ -316,9 +331,6 @@ border-radius: 4px;
   display: flex;
   content: "";
   height: 120px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   background-color: #F5F4FA;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -401,7 +413,6 @@ border-radius: 4px;
 
 .social-list {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -441,44 +452,51 @@ border-radius: 4px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;  
-  height: 92px;
 }
 
 .client-card {
-  display: flex;
+  
   width: calc((100% - 150px)/6);
   margin-right: 0;
-  margin-left: 30px;
-  height: 92px;
-  border: 1px solid #AFB1B8;
-  border-radius: 4px;
-  align-items: center;
-  justify-content: center; 
+  margin-left: 30px; 
 }
 
 .client-card:nth-child(1) {
   margin-left: 0px;
 }
 
-.client-card:hover,
-.client-card:focus {
-  border: 1px solid var(--accent-color);
-  fill: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
 .client-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   color: currentColor;
   text-decoration: none;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  height: 92px;
+  width: 170px;
+  fill: var(--primary-icon-color);
+
+}
+
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .client-icon {
   width: 106px;
   height: 60px;
   fill: var(--primary-icon-color);
+}
+
+.client-icon:hover,
+.client-link:focus {
+  fill: var(--accent-color);
+  
 }
 
 
@@ -566,7 +584,7 @@ border-radius: 4px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: var(---secondary-text-color);
+  color: var(--secondary-text-color);
 }
 
 .item-card .link {
@@ -643,11 +661,12 @@ border-radius: 4px;
   list-style: none;
   align-items: center;
   justify-content: center;
- 
+  
 }
 
 .title-net {
   padding: 0;
+  margin-top: 0;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -657,6 +676,15 @@ border-radius: 4px;
   color: var(--white-text-color);
 }
 
+.social-link {
+  background-color: rgba(255, 255, 255, 0.1);;
+}
+
+.social-link:hover,
+ .social-link:focus{
+  background-color: var(--accent-color));
+  ;
+}
 .main-footer {
   display: flex;
   align-items: baseline;
